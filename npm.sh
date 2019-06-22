@@ -8,7 +8,7 @@ git clone https://gitlab.com/stressgrid/stressgrid.git
 cd stressgrid/coordinator/management/
 npm install && npm run build-css && npm run build
 cd ..
-printf 'yes\n' | ./script |MIX_ENV=prod mix deps.get
+printf 'yes\n' |MIX_ENV=prod mix deps.get
 printf 'yes\n' |MIX_ENV=prod mix release
 cd ../generator
 printf 'yes\n' |MIX_ENV=prod mix deps.get
