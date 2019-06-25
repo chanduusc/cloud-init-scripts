@@ -13,3 +13,5 @@ printf 'yes\n' |MIX_ENV=prod mix release
 cd ../generator
 printf 'yes\n' |MIX_ENV=prod mix deps.get
 printf 'yes\n' |MIX_ENV=prod mix release
+cd ../client
+npm install && npm run build && npm link
