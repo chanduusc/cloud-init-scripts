@@ -23,4 +23,4 @@ cd
 git clone https://gitlab.com/stressgrid/udp_server.git
 cd udp_server
 /usr/bin/gcc -pthread -o udp_server udp_server.c
-/usr/bin/nohup ./udp_server &
+# /usr/bin/nohup ./udp_server &
