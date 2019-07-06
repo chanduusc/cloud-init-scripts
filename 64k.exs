@@ -1,4 +1,4 @@
-0..100 |> Enum.each(fn _ ->
-  get("/64k.html", [{"Header", "x-Spirent-Id: 00-00-00-00-00-00 03704600"}])
-  delay(900, 0.1)
+0..1 |> Enum.each(fn _ ->
+  get("/64k.html",[{"Header", "Accept-Language: en-us,Accept-Encoding: gzip, deflate, compress,X-EBAY-API-APP-ID:958w4784w59w85"}])
+  delay(10, 0.1)
 end)

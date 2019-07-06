@@ -14,6 +14,7 @@ sudo wget -O /var/www/html/64k.html https://raw.githubusercontent.com/chanduusc/
 sudo wget -O /var/www/html/4k.html https://raw.githubusercontent.com/chanduusc/cloud-init-scripts/master/4k.html
 sudo wget -O /var/www/html/1b.html https://raw.githubusercontent.com/chanduusc/cloud-init-scripts/master/1b.html
 sudo wget -O /var/www/html/bench.html https://raw.githubusercontent.com/chanduusc/cloud-init-scripts/master/bench.html
+sudo wget -O /etc/ssl/certs/lighttpd.pem https://raw.githubusercontent.com/chanduusc/cloud-init-scripts/master/lighttpd.pem
 sudo systemctl stop lighthttpd
 sudo systemctl reload lighthttpd
 sudo systemctl start lighthttpd
@@ -25,5 +26,5 @@ cd ..
 su - panadmin -c "wget https://raw.githubusercontent.com/chanduusc/cloud-init-scripts/master/npm.sh"
 su - panadmin -c "chmod a+x npm.sh"
 su - panadmin -c "./npm.sh"
-su - panadmin -c "/home/panadmin/stressgrid/coordinator/_build/prod/rel/coordinator/bin/coordinator start"
-su - panadmin -c "/home/panadmin/stressgrid/generator/_build/prod/rel/generator/bin/generator start"
+su - panadmin -c "/home/panadmin/stressgrid/coordinator/_build/prod/rel/coordinator/bin/coordinator daemon"
+su - panadmin -c "/home/panadmin/stressgrid/generator/_build/prod/rel/generator/bin/generator daemon"
