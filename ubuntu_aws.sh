@@ -5,6 +5,7 @@ wget https://packages.erlang-solutions.com/erlang-solutions_1.0_all.deb
 sudo dpkg -i erlang-solutions_1.0_all.deb
 wget -O /etc/sysctl.d/10-dummy.conf https://raw.githubusercontent.com/chanduusc/cloud-init-scripts/master/10-dummy.conf
 /sbin/sysctl -p
+sudo wget -O /etc/ssl/certs/lighttpd.pem https://raw.githubusercontent.com/chanduusc/cloud-init-scripts/master/lighttpd.pem
 sudo apt-get update
 sudo apt-get -y install esl-erlang
 sudo apt -y install zlib1g zlib1g-dev elixir build-essential curl git libssl-dev libz-dev unzip lighttpd
@@ -14,7 +15,6 @@ sudo wget -O /var/www/html/64k.html https://raw.githubusercontent.com/chanduusc/
 sudo wget -O /var/www/html/4k.html https://raw.githubusercontent.com/chanduusc/cloud-init-scripts/master/4k.html
 sudo wget -O /var/www/html/1b.html https://raw.githubusercontent.com/chanduusc/cloud-init-scripts/master/1b.html
 sudo wget -O /var/www/html/bench.html https://raw.githubusercontent.com/chanduusc/cloud-init-scripts/master/bench.html
-sudo wget -O /etc/ssl/certs/lighttpd.pem https://raw.githubusercontent.com/chanduusc/cloud-init-scripts/master/lighttpd.pem
 sudo systemctl stop lighthttpd
 sudo systemctl reload lighthttpd
 sudo systemctl start lighthttpd
