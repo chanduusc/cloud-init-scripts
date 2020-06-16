@@ -7,7 +7,7 @@ wget -O /etc/sysctl.d/10-dummy.conf https://raw.githubusercontent.com/chanduusc/
 /sbin/sysctl -p
 sudo wget -O /etc/ssl/certs/lighttpd.pem https://raw.githubusercontent.com/chanduusc/cloud-init-scripts/master/lighttpd.pem
 sudo apt-get update
-sudo apt-get -y install esl-erlang
+sudo apt-get -y install erlang
 sudo apt -y install zlib1g zlib1g-dev elixir build-essential curl git libssl-dev libz-dev unzip lighttpd
 sudo rm -rf /etc/lighttpd/lighttpd.conf
 sudo wget -O /etc/lighttpd/lighttpd.conf https://raw.githubusercontent.com/chanduusc/cloud-init-scripts/master/lighttpd.conf
