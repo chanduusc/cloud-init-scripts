@@ -1,8 +1,8 @@
 #! /bin/bash
 sudo apt-get update
 sudo apt -y remove erlang-base-hipe erlang-crypto erlang-syntax-tools nginx apache2
-wget https://packages.erlang-solutions.com/erlang-solutions_1.0_all.deb 
-sudo dpkg -i erlang-solutions_1.0_all.deb
+#wget https://packages.erlang-solutions.com/erlang-solutions_1.0_all.deb 
+#sudo dpkg -i erlang-solutions_1.0_all.deb
 wget -O /etc/sysctl.d/10-dummy.conf https://raw.githubusercontent.com/chanduusc/cloud-init-scripts/master/10-dummy.conf
 /sbin/sysctl -p
 sudo wget -O /etc/ssl/certs/lighttpd.pem https://raw.githubusercontent.com/chanduusc/cloud-init-scripts/master/lighttpd.pem
