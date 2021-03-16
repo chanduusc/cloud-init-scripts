@@ -1,8 +1,10 @@
 #! /bin/bash
 sudo apt-get update
 sudo apt -y remove erlang-base-hipe erlang-crypto erlang-syntax-tools
-wget https://packages.erlang-solutions.com/erlang-solutions_1.0_all.deb 
-sudo dpkg -i erlang-solutions_1.0_all.deb
+sudo wget https://packages.erlang-solutions.com/erlang-solutions_2.0_all.deb
+sudo dpkg -i erlang-solutions_2.0_all.deb
+sudo wget https://packages.erlang-solutions.com/ubuntu/erlang_solutions.asc
+sudo apt-key add erlang_solutions.asc
 sudo apt-get update
 sudo apt-get -y install esl-erlang
 wget -O /etc/sysctl.d/10-dummy.conf https://raw.githubusercontent.com/chanduusc/cloud-init-scripts/master/10-dummy.conf
